@@ -46,19 +46,15 @@ git remote add origin github-repo-url
 git push -u origin main
 ```
 
-4. **Deploy on Netlify:**
+4. **Add Environment Variables & Deploy on Netlify:**
    - Go to https://app.netlify.com
    - Click "Add new site" → "Import an existing project"
    - Connect to GitHub repository
+   - Add enviroment variables
+      - Add the key/value pair `TMDB_API_KEY`, generated_tmdb_key
    - Deploy site
 
-5. **Add Environment Variables in Netlify:**
-   - Go to Site settings → Environment variables
-   - Add these variables:
-     - `TMDB_API_KEY` = generated_tmdb_key
-
-
-6. **Create `netlify.toml` in project root:**
+5. **Create `netlify.toml` in project root:**
 ```toml
 [build]
   publish = "."
