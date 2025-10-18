@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Film Club Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Lakki+Reddy&family=League+Spartan:wght@100..900&family=Mountains+of+Christmas:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        nav {
+            background: rgba(220, 20, 60, 0.1);
+            border: 2px solid #dc143c;
+            border-radius: 12px;
+            padding: 15px 30px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dc143c;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            /* font-size: large; */
+        }
+
+        .nav-links a:hover {
+            background: rgba(220, 20, 60, 0.3);
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            background: linear-gradient(135deg, #dc143c 0%, #ff6b6b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .watchlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .watchlist-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a1010 100%);
+            border: 2px solid #dc143c;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .watchlist-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(220, 20, 60, 0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+
+        .watchlist-card:hover::before {
+            transform: rotate(45deg) scale(1.2);
+        }
+
+        .watchlist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(220, 20, 60, 0.5);
+            border-color: #ff4757;
+        }
+
+        .watchlist-theme {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #dc143c;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* .watchlist-theme {
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        } */
+
+        .watchlist-emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .watchlist-description {
+            color: #e0e0e0;
+            /* font-size: 1.15rem; */
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .watchlist-btn {
+            background: #dc143c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .watchlist-btn:hover {
+            background: #ff1744;
+            transform: scale(1.05);
+        }
+
+        .coming-soon {
+            opacity: 0.6;
+            /* cursor: not-allowed; */
+        }
+
+        .coming-soon .watchlist-btn {
+            background: #555;
+            /* cursor: not-allowed; */
+        }
+
+        .coming-soon .watchlist-btn:hover {
+            background: #555;
+            transform: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        .tmdb-attribution {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: rgba(1, 180, 228, 0.1);
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .tmdb-logo {
+            height: 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .watchlist-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Jummy's Film Club</a>
+        <div class="nav-links">
+            <a href="watchlist.html?id=2025-fangtober">Fangtober</a>
+            <a href="watchlist.html?id=2025-camp">Camp!</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Watchlists</h1>
+            <p class="subtitle"></p>
+        </header>
+
+        <section id="watchlists">
+            <!-- <h2 style="text-align: center; color: #dc143c; font-size: 2rem; margin-bottom: 20px;" id="2025">2025 Watchlists</h2> -->
+            <div class="watchlist-grid">
+                <div class="watchlist-card" onclick="window.location.href='watchlist.html?id=2025-fangtober'">
+                    <div class="watchlist-emoji">🧛</div>
+                    <div class="watchlist-theme">Fangtober</div>
+                    <!-- <div class="watchlist-theme">Fangtober</div> -->
+                    <p class="watchlist-description">Sink your teeth into at least 31 vampire films this October to earn my undying friendship!
+                    </p>
+                    <button class="watchlist-btn">View List</button>
+                </div>
+
+                <div class="watchlist-card" onclick="window.location.href='watchlist.html?id=2025-camp'">
+                    <div class="watchlist-emoji">💅</div>
+                    <div class="watchlist-theme">Camp!</div>
+                    <p class="watchlist-description">Hello happy campers, and welcome to Camp! A palce to celebrate excess, artifice, 
+                        and the sheer joy of too-muchness.
+                    </p>
+                    <button class="watchlist-btn">View List</button>
+                </div>
+
+                <div class="watchlist-card" onclick="window.location.href='watchlist.html?id=2025-technicolor-theater'">
+                    <div class="watchlist-emoji">📽️</div>
+                    <div class="watchlist-theme">Technicolor Theater</div>
+                    <p class="watchlist-description">???</p>
+                    <button class="watchlist-btn">View List</button>
+                </div>
+            </div>
+
+            <!--  <div class="watchlist-card coming-soon" onclick="window.location.href='watchlist.html?id=2025-winter-wonderland'">
+                <div class="watchlist-emoji">👽</div>
+                <div class="watchlist-theme">Winter Wonderland</div>
+                <p class="watchlist-description">24 festive films for the holiday season</p>
+                <button class="watchlist-btn">View List</button>
+            </div> -->
+            </div>
+
+
+            <!-- <h2 style="text-align: center; color: #dc143c; font-size: 2rem; margin: 60px 0 20px 0;" id="2026">2026 Lists</h2>
+            <div class="watchlist-grid">
+                <div class="watchlist-card coming-soon">
+                    <div class="watchlist-emoji">🔪</div>
+                    <div class="watchlist-month">2026</div>
+                    <div class="watchlist-theme">Coming Soon</div>
+                    <p class="watchlist-description">Next year slasher films await...</p>
+                    <button class="watchlist-btn">Coming Soon</button>
+                </div>
+
+                <div class="watchlist-card coming-soon">
+                    <div class="watchlist-emoji">👽</div>
+                    <div class="watchlist-month">2026</div>
+                    <div class="watchlist-theme">Coming Soon</div>
+                    <p class="watchlist-description">Alien invasion films from beyond...</p>
+                    <button class="watchlist-btn">Coming Soon</button>
+                </div>
+
+                <div class="watchlist-card coming-soon">
+                    <div class="watchlist-emoji">🎭</div>
+                    <div class="watchlist-month">2026</div>
+                    <div class="watchlist-theme">Coming Soon</div>
+                    <p class="watchlist-description">Another thrilling collection coming...</p>
+                    <button class="watchlist-btn">Coming Soon</button>
+                </div>
+            </div>
+        </section>  -->
+
+        <footer id="about">
+            <!-- <p>Track your progress through themed movie lists. Each watchlist features curated films with tracking, filters, and recommendations.</p> -->
+            <div class="tmdb-attribution">
+                <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDb Logo" class="tmdb-logo">
+                <span>This product uses the TMDb API but is not endorsed or certified by TMDb.</span>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.85rem;">
+                <a href="https://www.themoviedb.org" target="_blank" style="color: #01b4e4; text-decoration: none;">Visit TMDb</a>
+            </p>
+        </footer>
+        <script>
+            function watchlistAlert() {
+                    alert("Sorry, this list is still being curated. Please check back later!");
+                }
+        </script>
+    </div>
+</body>
+</html>

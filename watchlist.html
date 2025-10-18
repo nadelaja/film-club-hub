@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fangtober Watchlist</title>
+    <link rel="stylesheet" href="watchlist.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Jolly+Lodger&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mountains+of+Christmas:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Jummy's Film Club</a>
+        <div class="nav-links">
+            <!-- <a href="index.html">Home</a> -->
+            <a href="watchlist.html?id=2025-fangtober">Fangtober</a>
+            <a href="watchlist.html?id=2025-camp">Camp!</a>
+            <!-- <a href="watchlist.html?id=2025-winter-wonderland">Winter Wonderland</a> -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1 id="watchlistTitle">FANGTOBER</h1>
+            <div class="counter">
+                Movies Watched: <span id="watchedCount">0</span> /
+                <span id="totalCount">31</span>
+            </div>
+        </header>
+
+        <div class="controls">
+            <select id="yearFilter">
+                <option value="">All Years</option>
+            </select>
+            <select id="genreFilter">
+                <option value="">All Genres</option>
+            </select>
+            <select id="sortBy">
+                <option value="alpha">A → Z</option>
+                <option value="alpha-reverse">Z → A</option>
+                <option value="year-old">Oldest First</option>
+                <option value="year-new">Newest First</option>
+                <option value="runtime-short">Shortest First</option>
+                <option value="runtime-long">Longest First</option>
+            </select>
+            <button class="random-btn" id="randomBtn">🎲 Random Movie</button>
+        </div>
+
+        <div id="movieGrid" class="movie-grid">
+            <div class="loading">Loading vampire films...</div>
+        </div>
+
+        <div class="tmdb-credit">
+            Data provided by
+            <a href="https://www.themoviedb.org" target="_blank">The Movie Database (TMDb)</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" id="closeBtn">×</button>
+            <button class="nav-arrow prev" id="prevBtn">‹</button>
+            <button class="nav-arrow next" id="nextBtn">›</button>
+            <img id="overlayPoster" class="overlay-poster" src="" alt="" />
+            <div class="overlay-details">
+                <h2 class="overlay-title" id="overlayTitle"></h2>
+                <div class="overlay-meta">
+                    <span id="overlayYear"></span>
+                    <span id="overlayRuntime"></span>
+                    <span id="overlayGenres"></span>
+                    <span id="overlayDirector"></span>
+                </div>
+                <div id="streamingInfo" class="streaming-info" style="display: none">
+                    <div class="streaming-title">Where to Watch</div>
+                    <div id="streamingServices" class="streaming-services"></div>
+                    <div style="font-size: 0.75rem; color: #fff; margin-top: 10px">
+                        Data provided by
+                        <a href="https://www.justwatch.com" target="_blank"
+                            style="color: #01b4e4; text-decoration: none">JustWatch</a>
+                    </div>
+                </div>
+                <p class="overlay-summary" id="overlaySummary"></p>
+                <div class="overlay-actions">
+                    <button class="watch-toggle" id="watchToggle">
+                        Mark as Watched
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="congratsModal" class="congrats-modal">
+        <div class="congrats-content">
+            <h2>Yippie!!</h2>
+            <p id="congratsMessage">You've completed the Watchlist!</p>
+            <button class="watch-toggle" onclick="document.getElementById('congratsModal').classList.remove('active')"
+                style="margin-top: 20px">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Inject environment variables from Netlify/Vercel
+        window.ENV = {
+            TMDB_API_KEY: "{{TMDB_API_KEY}}",
+            WATCHMODE_API_KEY: "{{WATCHMODE_API_KEY}}",
+        };
+    </script>
+
+    <script src="config.js"></script>
+    <script src="watchlist.js"></script>
+</body>
+
+</html>
