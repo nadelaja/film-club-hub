@@ -1,4 +1,5 @@
 [build]
+  command = "sed -i 's/{{TMDB_API_KEY}}/'$TMDB_API_KEY'/g' watchlist.html"
   publish = "."
 
 [[redirects]]

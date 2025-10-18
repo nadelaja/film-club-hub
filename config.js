@@ -108,7 +108,7 @@ const WATCHLIST = {
         style: {
             primaryColor: '#9370db',    // Purple
             backgroundColor: '#1a1a2e', // Dark blue-purple
-            font: "'Creepster', cursive"
+            font: "Sans-serif"
         },
         congratsMessage: "You've conquered Spooktober! 25 haunting films watched. You're not afraid of ghosts anymore! 👻",
         movies: [

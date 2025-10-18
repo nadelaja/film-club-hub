@@ -1,6 +1,6 @@
 // API Configuration
 const CONFIG = {
-    TMDB_API_KEY: window.ENV?.TMDB_API_KEY || '',
+    TMDB_API_KEY: window.ENV?.TMDB_API_KEY || ''
 };
 
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -456,8 +456,11 @@ if (watchlistConfig.style) {
             });
         });
 
-        // Congratulations
-
+        // "film loading" text
+        document.querySelectorAll(".loading")
+            .forEach((el) => {
+                el.style.color = `${style.primaryColor}80`; // ff = 100% opacity
+            });
 
         // Movie card hover - appling inline style with !important via CSS worked
         const styleSheet = document.createElement("style");
@@ -473,8 +476,7 @@ if (watchlistConfig.style) {
             el.style.background = style.primaryColor;
         });
 
-        document
-            .querySelectorAll("select, button:not(.random-btn)")
+        document.querySelectorAll("select, button:not(.random-btn)")
             .forEach((el) => {
                 el.style.background = `${style.primaryColor}80`; // 80 = 50% opacity
             });
