@@ -101,14 +101,14 @@ const WATCHLIST = {
     ]
 },
     '2025-technicolor-theater': {
-        title: ' TECHNICOLOR THEATER',
+        title: 'Technicolor Theater',
         theme: 'Technicolor films',
         year: 2025,
         targetCount: 15,
         style: {
             primaryColor: '#9370db',    // Purple
             backgroundColor: '#1a1a2e', // Dark blue-purple
-            font: "'Fascinate', system-ui;"
+            font: "'Yesteryear', cursive"
         },
         congratsMessage: "You've conquered Spooktober! 25 haunting films watched. You're not afraid of ghosts anymore! 👻",
         movies: [
@@ -131,7 +131,7 @@ const WATCHLIST = {
             { title: 'Suspiria ', year: 1977 },
             { title: 'Funny Face', year: 1957 },
             { title: 'Marnie', year: 1964 },
-            { title: 'Matchless', year: 1967 }
+            { title: 'An American In Paris', year: 1951 }
         ]
     },
     /*'2025-winter-wonderland': {

@@ -1,5 +1,5 @@
-        @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Lakki+Reddy&family=League+Spartan:wght@100..900&family=Mountains+of+Christmas:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Lakki+Reddy&family=League+Spartan:wght@100..900&family=Mountains+of+Christmas:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yesteryear&display=swap');
+
         * {
             font-family: "Poppins", sans-serif;
             margin: 0;
@@ -30,7 +30,8 @@
         .nav-logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #d1d1d1; /* #dc143c */
+            color: #d1d1d1;
+            /* #dc143c */
             text-decoration: none;
         }
 
@@ -122,20 +123,20 @@
         }
 
         .reset-btn {
-    padding: 10px 20px;
-    border: 2px solid #666;
-    background: rgba(100, 100, 100, 0.1);
-    color: #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-}
+            padding: 10px 20px;
+            border: 2px solid #666;
+            background: rgba(100, 100, 100, 0.1);
+            color: #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
 
-.reset-btn:hover {
-    background: rgba(100, 100, 100, 0.3);
-    box-shadow: 0 0 15px rgba(100, 100, 100, 0.5);
-}
+        .reset-btn:hover {
+            background: rgba(100, 100, 100, 0.3);
+            box-shadow: 0 0 15px rgba(100, 100, 100, 0.5);
+        }
 
         .movie-grid {
             display: grid;
