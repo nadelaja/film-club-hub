@@ -3,7 +3,7 @@
 
 const WATCHLIST = {
     '2025-fangtober': {
-        title: '.˚₊‧♱˚₊ FANGTOBER ₊˚♱‧₊˚.',
+        title: '.˚₊♱˚₊ FANGTOBER ₊˚♱₊˚',
         theme: 'Vampires',
         year: 2025,
         targetCount: 31,
@@ -171,7 +171,12 @@ const WATCHLIST = {
             { title: 'Rudolph the Red-Nosed Reindeer', year: 1964 },
             { title: 'Frosty the Snowman', year: 1969 }
         ]
-    }, */
+    }, 
+    
+    
+    primaryColor: '#9370db',    // Purple
+            backgroundColor: '#1a1a2e', // Dark blue-purple
+    */
     // Add future years here:
     // '2026-slasher-summer': {
     //     title: '🔪 SLASHER SUMMER 🔪',
