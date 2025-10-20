@@ -1,6 +1,6 @@
 // API Configuration
 const CONFIG = {
-    TMDB_API_KEY: window.ENV?.TMDB_API_KEY || ''
+    TMDB_API_KEY: '2e09b4b897c47a07e1827679be1370fb' /* window.ENV?.TMDB_API_KEY || '' */
 };
 
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -410,6 +410,16 @@ document.addEventListener("keydown", (e) => {
         if (e.key === "ArrowRight") navigateMovie(1);
     }
 });
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+    if (confirm('Are you sure you want to reset all progress for this watchlist? This cannot be undone.')) {
+        watchedMovies = [];
+        localStorage.setItem(`watchlist_${watchlistId}_watched`, JSON.stringify(watchedMovies));
+        updateCounter();
+        renderMovies();
+    }
+});
+
 
 /* Color configuration  */
 if (watchlistConfig.style) {

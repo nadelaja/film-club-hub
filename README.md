@@ -57,6 +57,7 @@ git push -u origin main
 5. **Create `netlify.toml` in project root:**
 ```toml
 [build]
+  command = "sed -i 's/{{TMDB_API_KEY}}/'$TMDB_API_KEY'/g' watchlist.html"
   publish = "."
 
 [[redirects]]
