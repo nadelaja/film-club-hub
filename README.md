@@ -27,7 +27,7 @@ movie-challenge-hub/
 
 ## Basic Setup (For Me and those who care)
 
-1. **Create a `.gitignore` file** in your project root:
+1. **Create a `.gitignore` file** in the project root:
 ```
 .env
 .env.local
@@ -73,7 +73,7 @@ git push -u origin main
 ```javascript
 // Please follw this `year-theme-slug` format
 '2025-summer-slashers': {
-    title: '🔪 SUMMER SLASHERS 🔪',
+    title: 'SUMMER SLASHERS',
     theme: 'Classic Slashers',
     year: 2025,
     targetCount: 30,
@@ -90,7 +90,7 @@ git push -u origin main
 
 ```html
 <div class="challenge-card" onclick="window.location.href='challenge.html?id=2025-summer-slashers'">
-    <div class="challenge-emoji">🔪</div>
+</div>
     <div class="challenge-year">Summer</div>
     <div class="challenge-theme">Summer Slashers</div>
     <p class="challenge-description">30 classic slasher films</p>
@@ -128,12 +128,12 @@ This means:
 - Swipe navigation on mobile
 - Streaming info from TMDb (working on hyperlinks)
 
-## 🎮 Keyboard Shortcuts
+## Keyboard Shortcuts
 
 - `←/→` - Navigate movies
 - `Esc` - Close overlay
 
-## 📄 TMDb Attribution
+## TMDb Attribution
 
 Required by TMDb terms:
 - TMDb logo + "This product uses the TMDb API but is not endorsed or certified by TMDb."
