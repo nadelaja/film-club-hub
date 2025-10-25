@@ -3,7 +3,7 @@
 
 const WATCHLIST = {
     '2025-fangtober': {
-        title: '.˚₊♱˚₊ FANGTOBER ₊˚♱₊˚',
+        title: '₊♱˚₊ FANGTOBER ₊˚♱₊',
         theme: 'Vampires',
         year: 2025,
         targetCount: 31,
@@ -110,7 +110,7 @@ const WATCHLIST = {
             backgroundColor: '#1a1a2e', // Dark blue-purple
             font: "'Yesteryear', cursive"
         },
-        congratsMessage: "You've conquered Spooktober! 25 haunting films watched. You're not afraid of ghosts anymore! 👻",
+        congratsMessage: "Now you too have been colored by Technicolor ",
         movies: [
             { title: 'Meet Me in St. Louis', year: 1944 },
             { title: 'Heaven Can Wait', year: 1943 },
@@ -178,12 +178,12 @@ const WATCHLIST = {
             backgroundColor: '#1a1a2e', // Dark blue-purple
     */
     // Add future years here:
-    // '2026-slasher-summer': {
-    //     title: '🔪 SLASHER SUMMER 🔪',
+    // '2025-slasher-summer': {
+    //     title: 'SLASHER SUMMER',
     //     theme: 'Classic Slashers',
     //     year: 2026,
     //     targetCount: 30,
-    //     congratsMessage: "You survived Slasher Summer! 🔪",
+    //     congratsMessage: "You survived Slasher Summer!",
     //     movies: [
     //         { title: 'Halloween', year: 1978 },
     //         // ... more movies
