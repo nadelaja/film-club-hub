@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2aadc3c-3679-408d-b6fc-a7d86f35e642/deploy-status)](https://app.netlify.com/projects/jummys-film-club/deploys)
 # Film Club Hub
 
 That's basically what this is :D
@@ -127,6 +128,7 @@ This means:
 - Filters, sorting, random movie picker
 - Swipe navigation on mobile
 - Streaming info from TMDb (working on hyperlinks)
+- Button to reset progress
 
 ## Keyboard Shortcuts
 
