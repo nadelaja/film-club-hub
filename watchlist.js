@@ -1,6 +1,6 @@
 // API Configuration
 const CONFIG = {
-    TMDB_API_KEY: '2e09b4b897c47a07e1827679be1370fb' /* window.ENV?.TMDB_API_KEY || '' */
+    TMDB_API_KEY: window.ENV?.TMDB_API_KEY
 };
 
 const BASE_URL = "https://api.themoviedb.org/3";
