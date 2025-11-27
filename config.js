@@ -134,7 +134,7 @@ const WATCHLIST = {
             { title: 'An American In Paris', year: 1951 }
         ]
     },
-    /*'2025-winter-wonderland': {
+    '2025-winter-wonderland': {
         title: 'WINTER WONDERLAND',
         theme: 'Holiday Classics',
         year: 2025,
@@ -147,16 +147,16 @@ const WATCHLIST = {
         congratsMessage: "You've completed the Winter Wonderland challenge! 24 festive films to warm your heart!",
         movies: [
             { title: 'Home Alone', year: 1990 },
-            { title: 'Elf', year: 2003 },
+            { title: 'How the Grinch Stole Christmas', year: 2000  },
             { title: 'The Polar Express', year: 2004 },
-            { title: 'It\'s a Wonderful Life', year: 1946 },
-            { title: 'Miracle on 34th Street', year: 1947 },
+            { title: 'Carol', year: 2015 },
+            { title: 'Black Christmas', year: 1974 },
             { title: 'A Christmas Story', year: 1983 },
             { title: 'The Nightmare Before Christmas', year: 1993 },
             { title: 'Love Actually', year: 2003 },
-            { title: 'The Holiday', year: 2006 },
-            { title: 'Klaus', year: 2019 },
-            { title: 'Die Hard', year: 1988 },
+            { title: 'Kiss Kiss, Bang Bang', year: 2005 },
+            { title: 'Harry Potter and the Philosopher\'s Stone', year: 2001 },
+            { title: 'The Holdovers', year: 2023 },
             { title: 'Gremlins', year: 1984 },
             { title: 'Scrooged', year: 1988 },
             { title: 'The Santa Clause', year: 1994 },
@@ -164,17 +164,18 @@ const WATCHLIST = {
             { title: 'National Lampoon\'s Christmas Vacation', year: 1989 },
             { title: 'The Muppet Christmas Carol', year: 1992 },
             { title: 'Arthur Christmas', year: 2011 },
-            { title: 'The Grinch', year: 2018 },
-            { title: 'How the Grinch Stole Christmas', year: 2000 },
+            { title: 'Edward Scissorhands', year: 1990 },
+            { title: 'Violent Night', year: 2022 },
             { title: 'A Charlie Brown Christmas', year: 1965 },
             { title: 'The Year Without a Santa Claus', year: 1974 },
             { title: 'Rudolph the Red-Nosed Reindeer', year: 1964 },
-            { title: 'Frosty the Snowman', year: 1969 }
+            { title: 'Frosty the Snowman', year: 1969 },
+            { title: 'Tokyo Godfathers', year: 2003}
         ]
     }, 
     
     
-    primaryColor: '#9370db',    // Purple
+    /*primaryColor: '#9370db',    // Purple
             backgroundColor: '#1a1a2e', // Dark blue-purple
     */
     // Add future years here:

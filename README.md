@@ -7,11 +7,11 @@ That's basically what this is :D
 
 Welcome to my film club! I'll keep this updated with new curated lists throughout the year, think October horror marathons, summer blockbusters, holiday classics, genre deep-dives, whatever strikes **_my_** fancy (we can pick themes together tooo~!). Each collection has its own tracker so you can mark off what you've watched. This is currently being done via localSorage, but I might change that in the future because cross device tracking isn't possible right now. You can also filter by year or genre, and even get random picks when you can't decide. Your progress saves automatically in your browser, so you can work through the lists at your own pace. Currently live: Fangtober 🦇 (watch 31 vampire films in 31 days!).
 
-**More coming soon!**
+**Updates**
+
+The overlay no longer jumps when navigating through films, but the the navigation arrows use the movies array (original order), while the page itself shows the filtered movies (sorted order). So, they're out of sync! 
 
 With The Movie Database's API most sources are listed in the details of the film cards, but please let me know if you have trouble finding anything!
-
-**Super duper sidenote, but please expect lots o f emojis/emoticons/kaomojis, they're cute and easy to implement. Might switch them up later, but who knows.
 
 ## Overall Project Structure
 
@@ -20,13 +20,15 @@ movie-challenge-hub/
 ├── index.html         # Homepage with list selection
 ├── challenge.html     # Main page
 ├── config.js          # Movie lists and configurations
-├── .env               # Environment variables, I've also included a Environment Variables Template/Example (DO NOT COMMIT :P)
+├── .env               # Environment variables, I've also included a Environment Variables Template/Example For the Node.js/Vite/webpack peeps (DO NOT COMMIT :P)
 ├── .gitignore         # Git ignore file
-├── netlify.toml       # Netlify deployment configuration
+├── netlify.toml       # Netlify deployment configuration is using Netlify Environment Variables
 └── README.md          # This file!
 ```
 
-## Basic Setup (For Me and those who care)
+## Basic Setup (For Me and Those Who Care)
+**Notice**: If you're not using a build tool like Node.js/Vite/Webpack, skip step 1
+
 
 1. **Create a `.gitignore` file** in the project root:
 ```
@@ -35,7 +37,7 @@ movie-challenge-hub/
 node_modules/
 ```
 
-2. **Get the API:**
+2. **Get an API Key:**
    - **TMDb API**: https://www.themoviedb.org/settings/api (free, instant approval, *attribution required*!)
 
 3. **Push to GitHub** (without API keys in code):
@@ -127,7 +129,7 @@ This means:
 - Separate progress tracking per challenge (localStorage!)
 - Filters, sorting, random movie picker
 - Swipe navigation on mobile
-- Streaming info from TMDb (working on hyperlinks)
+- Streaming info from TMDb (working on organizing them)
 - Button to reset progress
 
 ## Keyboard Shortcuts

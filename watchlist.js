@@ -1,6 +1,6 @@
 // API Configuration
 const CONFIG = {
-    TMDB_API_KEY: window.ENV?.TMDB_API_KEY
+    TMDB_API_KEY: "744a59dd207c2c61a4e50d8408cb0ca8" /* window.ENV?.TMDB_API_KEY */
 };
 
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -269,9 +269,9 @@ function openOverlay(index) {
 
     // Add runtime if available
     const runtimeText = movie.runtime
-        ? `Runtime: ${movie.runtime} min`
+        ? `<b>Runtime:</b> ${movie.runtime} min`  //if...else
         : "";
-    document.getElementById("overlayRuntime").textContent = runtimeText;
+    document.getElementById("overlayRuntime").innerHTML = runtimeText;
     document.getElementById("overlayRuntime").style.display = movie.runtime
         ? "inline"
         : "none";
